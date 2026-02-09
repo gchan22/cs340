@@ -4,3 +4,4 @@ https://www.putorius.net/linux-basename-command.html#:~:text=Remove%20Path%20Fro
 https://stackoverflow.com/questions/10535985/how-to-remove-filename-prefix-with-a-posix-shell
 https://stackoverflow.com/questions/22803916/bash-string-comparison-fails
 https://stackoverflow.com/questions/30559296/diff-command-in-bash
+https://stackoverflow.com/questions/71442546/navigate-to-a-executable-relative-path-bash
