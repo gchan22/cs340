@@ -1,5 +1,5 @@
 #captures the program name
-program=$1
+program=$0
 
 #keeps track of the test number
 count=0
