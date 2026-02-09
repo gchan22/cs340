@@ -1,0 +1,2 @@
+https://stackoverflow.com/questions/10849297/compare-a-string-using-sh-shell
+https://unix.stackexchange.com/questions/617438/how-to-find-directory-in-directory
