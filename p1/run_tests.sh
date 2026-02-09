@@ -16,11 +16,7 @@ do
     else
         echo "TEST "$count": FAILED"
     fi
-    # echo "$(./$program "$i")"
-    # echo "$count"
-    echo "$(cat "$(find ./tests/outputs | grep "$count")")"
 
-    
     #increment current test number
     ((count++))
 done
