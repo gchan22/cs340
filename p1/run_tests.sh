@@ -12,7 +12,7 @@ do
     #finds output associated with the input
     output="./tests/outputs/$testNa.output"
     #checks the output given by input and compares with correct output
-    if ./$program "$i" | diff -w -q - "$output" > /dev/null
+    if "$program" "$i" | diff -w -q - "$output" > /dev/null
     then
         echo "TEST $testNum: PASS"
     else
