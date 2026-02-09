@@ -13,9 +13,9 @@ do
     output=$(find ./tests/outputs | grep test_"$count".output)
     if [ "$(./$program "$i")" = "$(cat "$output")" ]
     then
-        echo "TEST "$count": PASSED"
+        echo "TEST "$count": PASS"
     else
-        echo "TEST "$count": FAILED"
+        echo "TEST "$count": FAIL"
     fi
 
     #increment current test number
