@@ -4,16 +4,16 @@ program=$1
 #keeps track of the test number
 count=0
 #loops through the input to give a output when running program
-for i in $(find ./p1/tests/inputs -type f | sort) 
+for i in $(find ./tests/inputs -type f | sort) 
 do
     #checks the output given by input and compares with correct output
-    for j in $(find ./p1/tests/outputs -type f | grep "$count" | sort)
+    for j in $(find ./tests/outputs -type f | grep "$count" | sort)
     do
         if [ "$(./$program "$i")" = "$(cat "$j")" ]
         then
-            echo "TEST "$i": PASSED"
+            echo "TEST "$count": PASSED"
         else
-            echo "TEST "$i": FAILED"
+            echo "TEST "$count": FAILED"
         fi
     done
     #increment current test number
