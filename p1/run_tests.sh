@@ -12,7 +12,7 @@ do
     #finds output associated with the input
     output="./tests/outputs/$testNa.output"
     #checks the output given by input and compares with correct output
-    if [ "$(./$program "$i")" -eq "$(cat "$output")" ]
+    if [ "$(./$program "$i")" = "$(cat "$output" | tr -d "\n")" ]
     then
         echo "TEST $testNum: PASS"
     else
