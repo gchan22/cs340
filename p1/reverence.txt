@@ -1,2 +1,4 @@
 https://stackoverflow.com/questions/10849297/compare-a-string-using-sh-shell
 https://unix.stackexchange.com/questions/617438/how-to-find-directory-in-directory
+https://www.putorius.net/linux-basename-command.html#:~:text=Remove%20Path%20From%20Filename%20/%20Print,a%20look%20at%20an%20example.&text=As%20you%20can%20see%2C%20it%20took%20the%20full%20path%20~/.
+https://stackoverflow.com/questions/10535985/how-to-remove-filename-prefix-with-a-posix-shell
