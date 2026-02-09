@@ -1,7 +1,10 @@
 #!/bin/bash
 #captures the program name
 program=$1
-
+#if program in same directory and doesn't have slash
+if [ -f "$program" ] && [[ "$program" != */* ]]; then
+    program="./$program"
+fi
 #loops through the input to give a output when running program
 for i in $(ls ./tests/inputs/*.input | sort -V)
 do
