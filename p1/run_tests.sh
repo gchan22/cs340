@@ -3,7 +3,7 @@
 program=$1
 
 #loops through the input to give a output when running program
-for i in ./tests/inputs/*
+for i in $(ls ./tests/inputs/*.input | sort -V)
 do
     #strips to just the name without path or suffix
     testNa=$(basename "$i" .input)
