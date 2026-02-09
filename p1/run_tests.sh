@@ -1,10 +1,20 @@
 #!/bin/bash
 #captures the program name
 program=$1
-#if program in same directory and doesn't have slash
-if [ -f "$program" ] && [[ "$program" != */* ]]; then
+
+# If program is current directory but doen't have / then add on
+if [ -f "$program" ] && [[ "$program" != */* ]]
+then
     program="./$program"
 fi
+
+# If the program not in same directory search for it
+if [ ! -f "$program" ]
+then
+    program=$(find .. -name "$program" -type f)
+    
+fi
+
 #loops through the input to give a output when running program
 for i in $(ls ./tests/inputs/*.input | sort -V)
 do
@@ -15,7 +25,7 @@ do
     #finds output associated with the input
     output="./tests/outputs/$testNa.output"
     #checks the output given by input and compares with correct output
-    if "$program" "$i" | diff -w -q - "$output" > /dev/null
+    if $program "$i" | diff -w -q - "$output" > /dev/null
     then
         echo "TEST $testNum: PASS"
     else
