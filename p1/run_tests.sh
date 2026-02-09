@@ -9,13 +9,16 @@ count=0
 for i in ./tests/inputs/*
 do
     #checks the output given by input and compares with correct output
-   
-    if [ "$(./$program "$i")" = "$(cat "$(find ./tests/outputs | grep "$count")")" ]
+    
+    output=$(find ./tests/outputs | grep test_"$count".output)
+    if [ "$(./$program "$i")" = "$(cat "$output")" ]
     then
         echo "TEST "$count": PASSED"
     else
         echo "TEST "$count": FAILED"
     fi
+    echo "$(./$program "$i")" 
+    echo "$(cat "$output")"
 
     #increment current test number
     ((count++))
