@@ -17,8 +17,6 @@ do
     else
         echo "TEST "$count": FAILED"
     fi
-    echo "$(./$program "$i")" 
-    echo "$(cat "$output")"
 
     #increment current test number
     ((count++))
